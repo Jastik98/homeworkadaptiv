@@ -30,8 +30,8 @@
             <li>
               <a class="nav-link nav-linkstatic" href="./index.html">Studio</a>
             </li>
-            <li><a class="nav-link" href="">Portfolio</a></li>
-            <li><a class="nav-link" href="">Contacts</a></li>
+            <li><a class="nav-link" href="./index.html">Portfolio</a></li>
+            <li><a class="nav-link" href="./index.html">Contacts</a></li>
           </ul>
         </nav>
         <address class="teg-address">
@@ -48,12 +48,95 @@
             </li>
           </ul>
         </address>
+        <button class="btn-burger" type="button">
+          <svg class="icon-burger" width="24" height="24">
+            <use href="/images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-open">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-close">
+            <svg class="svg-close-icon" width="8" height="8">
+              <use href="/images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="div-nav-menu">
+            <nav class="mobile-menu-nav">
+              <ul class="mobile-list">
+                <li>
+                  <a
+                    class="mobile-list-item color-studio-menu"
+                    href="./index.html"
+                    >Studio</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-list-item" href="./index.html">Portfolio</a>
+                </li>
+                <li>
+                  <a class="mobile-list-item" href="./index.html">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="div-mobile-address">
+            <address class="teg-address-mobile">
+              <ul class="address-headera-mobile">
+                <li>
+                  <a
+                    class="address-contact-mobile address-color-mail"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="address-contact-mobile" href="tel:+110001111111"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="div-social-mobil-menu">
+            <ul class="menu-socialmedia-list">
+              <li class="character-list-item">
+                <a href="#" class="character-list-link"
+                  ><svg class="character-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram-2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="character-list-item">
+                <a href="#" class="character-list-link"
+                  ><svg class="character-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="character-list-item">
+                <a href="#" class="character-list-link"
+                  ><svg class="character-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook-1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="character-list-item">
+                <a href="#" class="character-list-link"
+                  ><svg class="character-list-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin-1"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <!-- Сама велика частина з кнопкою #section-->
       <section class="hero">
-        <div class="container hero-contant">
+        <div class="container">
           <h1 class="title">Effective Solutions for Your Business</h1>
           <button class="main-button" type="button">Order Service</button>
         </div>
@@ -122,6 +205,10 @@
           <ul class="character-ul">
             <li class="character-fon">
               <img
+                srcset="
+                  ./images/character/markguerrero.jpg   1x,
+                  ./images/character/markguerrero2x.jpg 2x
+                "
                 class="img-character"
                 src="./images/character/markguerrero.jpg"
                 alt="markguerrero"
@@ -165,6 +252,10 @@
             </li>
             <li class="character-fon">
               <img
+                srcset="
+                  ./images/character/tomford.jpg   1x,
+                  ./images/character/tomford2x.jpg 2x
+                "
                 class="img-character"
                 src="./images/character/tomford.jpg"
                 alt="tomford"
@@ -208,6 +299,10 @@
             </li>
             <li class="character-fon">
               <img
+                srcset="
+                  ./images/character/camilagarcia.jpg   1x,
+                  ./images/character/camilagarcia2x.jpg 2x
+                "
                 class="img-character"
                 src="./images/character/camilagarcia.jpg"
                 alt="camilagarcia"
@@ -251,6 +346,10 @@
             </li>
             <li class="character-fon">
               <img
+                srcset="
+                  ./images/character/danielwilson.jpg   1x,
+                  ./images/character/danielwilson2x.jpg 2x
+                "
                 class="img-character"
                 src="./images/character/danielwilson.jpg"
                 alt="danielwilson"
@@ -298,17 +397,39 @@
 
       <!--#4  Услуги Портфолио -->
       <section class="section-portfolio">
-        <div class="container container-portfolio">
+        <div class="container">
           <h2 class="title-portfolio">Our Portfolio</h2>
           <ul class="portfolio-ul">
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/banking.jpg"
-                  alt="banking"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/banking.jpg    1x,
+                      ./images/ourportfolio/banking-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/banking-tab1.jpg  1x,
+                      ./images/ourportfolio/banking-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/banking-mob1.jpg   1x,
+                      ./images/ourportfolio/banking-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/banking.jpg"
+                    alt="banking"
+                    width="360"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -323,12 +444,34 @@
             </li>
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/cashless.jpg"
-                  alt="cashless"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/cashless.jpg    1x,
+                      ./images/ourportfolio/cashless-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/cashless-tab2.jpg  1x,
+                      ./images/ourportfolio/cashless-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/cashless-mob2.jpg   1x,
+                      ./images/ourportfolio/cashless-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/cashless.jpg"
+                    alt="cashless"
+                    width="360"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -343,12 +486,34 @@
             </li>
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/meditation.jpg"
-                  alt="meditation"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/meditation.jpg    1x,
+                      ./images/ourportfolio/meditation-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/meditation-tab3.jpg  1x,
+                      ./images/ourportfolio/meditation-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/meditation-mob3.jpg   1x,
+                      ./images/ourportfolio/meditation-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/meditation.jpg"
+                    alt="meditation"
+                    width="360"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -363,12 +528,34 @@
             </li>
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/taxi.jpg"
-                  alt="taxi"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/taxi.jpg    1x,
+                      ./images/ourportfolio/taxi-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/taxi-tab4.jpg  1x,
+                      ./images/ourportfolio/taxi-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/taxi-mob4.jpg   1x,
+                      ./images/ourportfolio/taxi-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/taxi.jpg"
+                    alt="taxi"
+                    width="360"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -383,12 +570,34 @@
             </li>
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/screen.jpg"
-                  alt="screen"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/screen.jpg    1x,
+                      ./images/ourportfolio/screen-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/screen-tab5.jpg  1x,
+                      ./images/ourportfolio/screen-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/screen-mob5.jpg   1x,
+                      ./images/ourportfolio/screen-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/screen.jpg"
+                    alt="screen"
+                    width="360"
+                  />
+                </picture>
 
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -403,12 +612,35 @@
             </li>
             <li class="portfolio-fon hovertwo-portfolio">
               <div class="portfolio-img-hidden">
-                <img
-                  src="./images/ourportfolio/online.jpg"
-                  alt="online"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/ourportfolio/online.jpg    1x,
+                      ./images/ourportfolio/online-2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/online-tab6.jpg  1x,
+                      ./images/ourportfolio/online-tab2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/ourportfolio/online-mob6.jpg   1x,
+                      ./images/ourportfolio/online-mob-2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/ourportfolio/online.jpg"
+                    alt="online"
+                    width="360"
+                  />
+                </picture>
+
                 <p class="overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -567,14 +799,17 @@
               value="true"
               required
             />
+
             <label class="label-checkbox-policy" for="user-privacy"
               ><span class="span-checkbox"
                 ><svg class="icon-checkbox" width="10" height="8">
                   <use href="./images/icons.svg#icon-Vector"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="#" class="link-privacy-policy">Privacy Policy</a>
+              <span class="checkbox-policy-text">
+                I accept the terms and conditions of the
+                <a href="#" class="link-privacy-policy">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button class="button-popup" type="submit">Send</button>
